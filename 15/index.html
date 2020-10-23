@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <script type="text/javascript">
+            let x = prompt("masukan jumlah bintang")
+            
+            for (let i = 1; i <= x; i++) {
+                for (let j = 1; j <= i; j++) {
+                    document.write(j)                    
+                }        
+                for (let k = x; k > i; k--) {
+                    document.write("&nbsp&nbsp")                    
+                }     
+                for (let l = x; l > i; l--) {
+                     document.write("&nbsp&nbsp")                    
+                }
+                   
+                let l = i
+                for (let j = 1; j <= i; j++) {
+                    document.write(l)
+                    l--
+                    
+                }         
+                             
+                document.write("<br>")
+            }
+            let h = x-1
+
+             for (let i = 1; i < x; i++) {
+                 let y =1
+                 for (let k = x; k > i; k--) {
+                     document.write(y)
+                     y++                    
+                 }  
+                 for (let j = 1; j <= i; j++) {
+                    document.write("&nbsp&nbsp")                    
+                }  
+                for (let j = 1; j <= i; j++) {
+                    document.write("&nbsp&nbsp")                    
+                }  
+                let s = h
+                for (let k = x; k >= i+1; k--) {
+                    document.write(s)
+                    s--    
+                    console.log(s);                
+                 }  
+                 h--
+               
+                           
+                       
+                document.write("<br>")
+            }
+        </script>
+
+</body>
+</html>
