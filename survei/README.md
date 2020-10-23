@@ -17,9 +17,21 @@ dimana pada aplikasi ini terdapat 3 user dengan rolenya masing masing yaitu :
 
 ## User Demo
 Akun user untuk demo aplikasi antara lain :
- - Admin (admin@email.test || admin)
- - Pengunjung (pengunjung@email.test || pengunjung)
- - Surveyor (surveyor@tmail.test || surveyor) 
+ - Admin 
+```sh
+email : admin@email.test
+password : admin
+```
+ - Pengunjung 
+```sh
+email : pengunjung@email.test
+password : pengunjung
+```
+ - Surveyor  
+```sh
+email : surveyor@email.test
+password : surveyor
+```
 
 ## Installation Guide
 
