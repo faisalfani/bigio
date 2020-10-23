@@ -24,7 +24,12 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $product = ProductModel::all();
-        return view('home', compact('product'));
+       return redirect(route('login'));
+    }
+
+    public function home()
+    {
+        $products = ProductModel::where('status','accepted')->get();
+        return view('home', compact('products'));
     }
 }

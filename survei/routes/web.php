@@ -14,13 +14,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index']);
 
-Auth::routes();
+Auth::routes(); 
 
-Route::middleware('role:pengunjung')->get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::middleware('role:admin|surveyor')->get('/dashboard', function(){
-    return view('dashboard');
-})->name('dashboard');
+Route::middleware('role:pengunjung')->get('/home', [App\Http\Controllers\HomeController::class, 'home'])->name('home');
+Route::middleware('role:admin|surveyor')->get('/dashboard', [App\Http\Controllers\ProductController::class, 'index'])->name('dashboard');
+Route::middleware('role:admin|surveyor')->get('/dashboard/create', [App\Http\Controllers\ProductController::class, 'create'])->name('create');
+Route::middleware('role:admin|surveyor')->post('/dashboard/store', [App\Http\Controllers\ProductController::class, 'store'])->name('store');
+Route::middleware('role:admin|surveyor')->post('/dashboard/update', [App\Http\Controllers\ProductController::class, 'update'])->name('update');
